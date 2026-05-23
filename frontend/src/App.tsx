@@ -6,6 +6,9 @@ import Signup from './pages/Signup'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import MetricsTracker from './pages/MetricsTracker'
+import Analytics from './pages/Analytics'
+import Goals from './pages/Goals'
+import Social from './pages/Social'
 import './App.css'
 
 function App() {
@@ -37,6 +40,30 @@ function App() {
               element={
                 <PrivateRoute>
                   <MetricsTracker />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/analytics"
+              element={
+                <PrivateRoute>
+                  <Analytics />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/goals"
+              element={
+                <PrivateRoute>
+                  <Goals />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/social"
+              element={
+                <PrivateRoute>
+                  <Social />
                 </PrivateRoute>
               }
             />
