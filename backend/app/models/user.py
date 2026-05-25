@@ -21,6 +21,9 @@ class User(Base):
 
     # Relationships
     health_metrics = relationship("HealthMetric", back_populates="user", cascade="all, delete-orphan")
+    goals = relationship("Goal", back_populates="user", cascade="all, delete-orphan")
+    achievements = relationship("Achievement", back_populates="user", cascade="all, delete-orphan")
+    social_posts = relationship("SocialPost", back_populates="user", cascade="all, delete-orphan")
 
     def __repr__(self):
         return f"<User(id={self.id}, username='{self.username}', email='{self.email}')>"
